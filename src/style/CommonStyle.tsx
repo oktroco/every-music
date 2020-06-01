@@ -6,8 +6,10 @@ interface Styles {
 }
 
 export const GlobalStyle = createGlobalStyle`
+    * {
+        box-sizing: border-box;
+    }
     body{
-        width: 100vw;
         height: 100vh;
         padding: 0;
         margin: 0;

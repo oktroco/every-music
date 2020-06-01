@@ -1,5 +1,11 @@
+const Dotenv = require("dotenv-webpack");
+
 module.exports = {
-    mode: "production",
+    mode: "development",
+
+    node: {
+        fs: "empty",
+    },
 
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",
@@ -42,4 +48,6 @@ module.exports = {
         react: "React",
         "react-dom": "ReactDOM",
     },
+
+    plugins: [new Dotenv()],
 };

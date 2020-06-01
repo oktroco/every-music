@@ -6,8 +6,10 @@
     "author": "OKTROCO",
     "license": "OKTROCO",
     "devDependencies": {
+        "@types/node": "^14.0.6",
         "@types/react": "^16.9.35",
         "@types/react-dom": "^16.9.8",
+        "dotenv-webpack": "^1.8.0",
         "source-map-loader": "^0.2.4",
         "ts-loader": "^7.0.5",
         "typescript": "^3.9.3",
@@ -16,8 +18,10 @@
         "webpack-dev-server": "^3.11.0"
     },
     "dependencies": {
+        "@types/dotenv": "^8.2.0",
         "@types/socket.io-client": "^1.4.33",
         "@types/styled-components": "^5.1.0",
+        "dotenv": "^8.2.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "socket.io-client": "^2.3.0",
