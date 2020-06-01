@@ -1,0 +1,30 @@
+{
+    "name": "every-music",
+    "version": "1.0.0",
+    "description": "Platform that share playlist with people",
+    "main": "index.js",
+    "author": "OKTROCO",
+    "license": "OKTROCO",
+    "devDependencies": {
+        "@types/react": "^16.9.35",
+        "@types/react-dom": "^16.9.8",
+        "source-map-loader": "^0.2.4",
+        "ts-loader": "^7.0.5",
+        "typescript": "^3.9.3",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.11.0"
+    },
+    "dependencies": {
+        "@types/socket.io-client": "^1.4.33",
+        "@types/styled-components": "^5.1.0",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "socket.io-client": "^2.3.0",
+        "styled-components": "^5.1.1"
+    },
+    "scripts": {
+        "build": "webpack",
+        "start": "webpack-dev-server"
+    }
+}
