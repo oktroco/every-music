@@ -49,11 +49,18 @@ export interface SearchState {
 }
 
 interface SearchResult {
-    id: object;
+    id: ContentId;
     etag?: string;
     kind?: string;
     snippet: ContentSnippet;
     [key: string]: any;
+}
+
+interface ContentId {
+    kind: string;
+    videoId: string;
+    channelId?: string;
+    playlistId?: string;
 }
 
 interface ContentSnippet {
@@ -92,7 +99,7 @@ export default class Search extends React.Component<{}, SearchState> {
         const { searchValue } = this.state;
         console.log({ searchValue });
         const response = await fetch(
-            `https://www.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_YT_APIKEY}&part=snippet&q=${searchValue}&maxResults=20`,
+            `https://www.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_YT_APIKEY}&part=snippet&q=${searchValue}&maxResults=20&type=video`,
             {
                 headers: {
                     "Content-Type": "application/json",
@@ -105,8 +112,8 @@ export default class Search extends React.Component<{}, SearchState> {
         this.setState({ contents: items });
     };
 
-    addContent = (title: string) => {
-        socket.emit("playlist", { title: title });
+    addContent = (yt_id: string, title: string) => {
+        socket.emit("playlist", { yt_id: yt_id, title: title });
     };
 
     setContentsList = (): JSX.Element => {
@@ -121,7 +128,7 @@ export default class Search extends React.Component<{}, SearchState> {
                     </Column>
                     <Column>
                         <img src={element.snippet.thumbnails.default.url} />
-                        <button onClick={() => this.addContent(element.snippet.title)}>추가</button>
+                        <button onClick={() => this.addContent(element.id.videoId, element.snippet.title)}>추가</button>
                     </Column>
                 </Item>,
             );
