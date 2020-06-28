@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
-import Search from "./Search";
-import PlayList from "./PlayList";
+import Search from "./components/Search";
+import PlayList from "./components/PlayList";
 import { Row } from "../style/CommonStyle";
 
 export interface MainProps {
@@ -44,7 +44,7 @@ const LocalRow = styled(Row)`
     flex-wrap: wrap;
 `;
 
-export default class Main extends React.Component<MainProps, {}> {
+export default class PlayManager extends React.Component<MainProps, {}> {
     render(): JSX.Element {
         return (
             <MainPage>

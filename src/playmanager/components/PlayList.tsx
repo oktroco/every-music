@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Container, Row, Column } from "../style/CommonStyle";
+import { Container, Row, Column } from "../../style/CommonStyle";
 import socketio from "socket.io-client";
 import YouTube from "react-youtube";
 import { stringify } from "querystring";

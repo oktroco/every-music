@@ -1,13 +1,13 @@
 import * as React from "react";
-import { GlobalStyle } from "../style/CommonStyle";
-import Main from "./Main";
+import { GlobalStyle } from "./style/CommonStyle";
+import PlayManager from "./playmanager/PlayManager";
 
 export default class App extends React.Component<{}, {}> {
     render(): JSX.Element {
         return (
             <>
                 <GlobalStyle />
-                <Main is_logined={true} username={"오곁액"} />
+                <PlayManager is_logined={true} username={"오곁액"} />
             </>
         );
     }

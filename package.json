@@ -1,5 +1,5 @@
 {
-    "name": "every-music",
+    "name": "every-music-web",
     "version": "1.0.0",
     "description": "Platform that share playlist with people",
     "main": "index.js",
