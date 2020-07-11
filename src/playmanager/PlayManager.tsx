@@ -48,6 +48,7 @@ export default class PlayManager extends React.Component<MainProps, {}> {
     render(): JSX.Element {
         return (
             <MainPage>
+                <Player />
                 <LocalRow>
                     <PlayBox>
                         <PlayList />
